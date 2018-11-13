@@ -6,8 +6,8 @@
 function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
 upRight(pHeight, pColorEven, pColorOdd, pSymbol);
 upLeft(pHeight, pColorEven, pColorOdd, pSymbol);
-downLeft(pHeight, pColorEven, pColorOdd, pSymbol);
 downRight(pHeight, pColorEven, pColorOdd, pSymbol);
+downLeft(pHeight, pColorEven, pColorOdd, pSymbol);
 
 }
 
@@ -69,6 +69,7 @@ function downLeft(pHeight, pColorEven, pColorOdd, pSymbol){
 var rLine ="";
 for (i=pHeight;i > 0;i--){
 rLine +="<p>";
+  for (x=1; x<=pHeight-i;x++)
 //Create each line on the Rhombus
 for(j=0;j<i;j++){
 
@@ -86,7 +87,6 @@ rLine +="</p>";
 
 }
 
-  }
 
 document.getElementById("downLeft").innerHTML = rLine;
 }
